@@ -1,0 +1,77 @@
+<h5 class="ecomm-filter-block-header p-2">Filters</h5>
+
+<!--Storage Filter Section-->
+<div class="ecomm-filter-block p-2">
+    <section class="col">
+        <h6 class="ecomm-filter-block-tiitle">Storage
+            <span class="ecomm-filter-clearall" (click)="onSliderReset()" *ngIf="sliderDirty">Clear All</span>
+        </h6>
+        <div class="ecomm-filter-block-content">
+            <div class="ecomm-range-slider">
+                <ngx-slider 
+                    [(value)]="rangeSlider.min" 
+                    [(highValue)]="rangeSlider.max" 
+                    [options]="rangeSlider.options"
+                    (userChangeEnd)="onSliderChange($event)">
+                </ngx-slider>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!--RAM Filter Section-->
+<div class="ecomm-filter-block p-2">
+    <section class="col">
+        <h6 class="ecomm-filter-block-tiitle">
+            Ram
+            <span class="ecomm-filter-clearall" (click)="onRamFilterReset()" *ngIf="ramFilterDirty">Clear All</span>
+        </h6>
+        <div class="ecomm-filter-block-content">
+            <div class="form-check" *ngFor="let ram of ramList">
+                <input class="form-check-input" type="checkbox" 
+                    [checked]="ram.checked" (change)="ram.checked = !ram.checked;onRamFilterChange(ram)">
+                <label class="form-check-label" for="flexCheckChecked">
+                  {{ram.memory}} {{ram.unit}}
+                </label>
+              </div>
+        </div>
+    </section>
+</div>
+
+<!--HDD Filter Section-->
+<div class="ecomm-filter-block p-2">
+    <section class="col">
+        <h6 class="ecomm-filter-block-tiitle">
+            Hard Disk
+            <span class="ecomm-filter-clearall" (click)="onHddFilterReset()" *ngIf="hddFilterDirty">Clear All</span>
+        </h6>
+        <div class="ecomm-filter-block-content">
+            <select class="form-select" aria-label="Hard Disk Type" (change)="onhardDiskSelChange($event)">
+                <option selected value="select">Select</option>
+                <option class="ecomm-select-option" value="{{diskType}}" *ngFor="let diskType of diskTypeDdList">{{diskType}}</option>
+            </select>
+        </div>
+    </section>
+</div>
+
+<!-- <div class="ecomm-filter-block p-2">
+    <section class="col">
+        <h6 class="ecomm-filter-block-tiitle">
+            Ram Type
+            <span class="ecomm-filter-clearall" (click)="onRamFilterReset()" *ngIf="ramFilterDirty">Clear All</span>
+        </h6>
+        <div class="ecomm-filter-block-content">
+            <div class="form-check" *ngFor="let ram of ramList">
+                <input class="form-check-input" type="checkbox" 
+                    [checked]="ram.checked" (change)="ram.checked = !ram.checked;onRamFilterChange(ram)">
+                <label class="form-check-label" for="flexCheckChecked">
+                  {{ram.memory}} {{ram.unit}}
+                </label>
+              </div>
+        </div>
+    </section>
+</div> -->
+
+
+
+

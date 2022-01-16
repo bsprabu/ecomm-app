@@ -1,0 +1,59 @@
+.ecomm-logo {
+    color: $color-white;
+    line-height: 48px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ecomm-nav {
+    height: 48px;
+    color: $secondary-text-color;
+    width: 100%;
+
+    .nav-link {
+        color: $secondary-text-color;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: $secondary-text-color;
+        border-bottom: 4px solid $primary-color;
+    }
+}
+
+.ecomm-filter-clearall {
+    float: right;
+    text-transform: capitalize;
+    color: $primary-color;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.ecomm-card {
+.ecomm-btn-primary {
+    color: $color-white;
+    background-color: $primary-color;
+    border-color:  $primary-color;
+}
+
+.ecomm-btn-primary:hover {
+    color: $color-white;
+    background-color: $primary-color;
+    border-color:  $primary-color;
+}
+}
+  
+
+// overriding default bootstrap color code for checkbox
+.form-check-input:checked {
+    background-color: $primary-color !important;
+    border-color:  $primary-color !important;
+}
+
+.ecomm-loading-text {
+    color: $color-white;
+}
+
+
+
+

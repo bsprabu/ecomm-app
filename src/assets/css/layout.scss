@@ -1,0 +1,49 @@
+html, 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    background-color: $primary-bg-color;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.ecomm-container {
+    height: calc(100% - 75px);
+    background-color: $primary-bg-color;
+    overflow: auto;
+}
+
+.ecomm-header {
+    background-color: $header-bg-color;
+}
+
+.ecomm-box-block {
+    height: 100%;
+    background-color: $color-white;
+    box-shadow: 0 1px 8px 0 $box-shadow-color;
+    overflow-y: auto;
+}
+
+.ecomm-home-container {
+    height: 100%;
+}
+
+.ecomm-filter-block-tiitle {
+    text-transform: uppercase;
+    font-size: 0.825rem;
+}
+
+.ecomm-footer {
+    height: 27px;
+    background-color: $secondary-color;
+    position: fixed;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px){
+    .ecomm-container { 
+        height: fit-content
+    };
+}
