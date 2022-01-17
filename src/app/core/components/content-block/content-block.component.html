@@ -9,7 +9,9 @@
         <div class="col-md-4 p-1" *ngFor="let server of servers">
             <div class="card ecomm-card">
                 <div class="card-body p-2">
-                    <h5 class="card-title">{{server.model}}</h5>
+                    <h5 class="card-title">
+                        <a>{{server.model}}</a>
+                    </h5>
                     <div class="card-text">
                         <div class="d-flex my-1">
                             <p class="col my-1">
