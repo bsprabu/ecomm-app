@@ -1,9 +1,9 @@
-import { ChangeContext } from '@angular-slider/ngx-slider';
+import { ChangeContext, NgxSliderModule } from '@angular-slider/ngx-slider';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RamUIModel } from 'src/app/models/server.model';
-import { ServerService } from 'src/app/services/server.service';
-import { RANGE_SLIDER_CONFIG } from '../../common/ecomm.common';
+import { RANGE_SLIDER_CONFIG } from 'src/app/core/common/ecomm.common';
+import { RamUIModel } from 'src/app/core/models/server.model';
+import { ServerService } from 'src/app/core/services/server.service';
 
 import { SideBarComponent } from './side-bar.component';
 
@@ -13,7 +13,7 @@ describe('SideBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, NgxSliderModule],
       declarations: [SideBarComponent],
       providers: [ServerService]
     })

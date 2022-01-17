@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider/options';
-
-import { HARD_DISK_TYPES, RAM_LIST, RANGE_SLIDER_CONFIG } from '../../common/ecomm.common';
 import { ChangeContext } from '@angular-slider/ngx-slider';
-import { RamUIModel, ServerQueryParams } from 'src/app/models/server.model';
-import { ServerService } from 'src/app/services/server.service';
+
+import { RamUIModel, ServerQueryParams } from 'src/app/core/models/server.model';
+import { ServerService } from 'src/app/core/services/server.service';
+import { HARD_DISK_TYPES, RAM_LIST, RANGE_SLIDER_CONFIG } from 'src/app/core/common/ecomm.common';
 
 @Component({
   selector: 'ecomm-side-bar',

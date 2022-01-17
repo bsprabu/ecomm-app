@@ -3,8 +3,8 @@ import { debounceTime, map, Observable, Subscription } from 'rxjs';
 
 import { NgxSpinnerService } from 'ngx-spinner';
 
-import { ServerQueryParams, ServerUIModel } from 'src/app/models/server.model';
-import { ServerService } from 'src/app/services/server.service';
+import { ServerQueryParams, ServerUIModel } from 'src/app/core/models/server.model';
+import { ServerService } from 'src/app/core/services/server.service';
 
 @Component({
   selector: 'ecomm-content-block',

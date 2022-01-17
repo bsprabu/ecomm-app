@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 // Vendor Module
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { CoreModule } from './core/core.module';
 
 // Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 
 @NgModule({
   declarations: [
@@ -22,8 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    InfiniteScrollModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    CoreModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

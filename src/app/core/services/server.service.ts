@@ -1,9 +1,9 @@
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 
-import { ConfigurationUIModel, ServerQueryParams } from '../models/server.model';
+import { ConfigurationUIModel } from 'src/app/core/models/server.model';
 
 @Injectable({
   providedIn: 'root'

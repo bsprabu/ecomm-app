@@ -1,4 +1,4 @@
-import { RamUIModel } from "src/app/models/server.model"
+import { RamUIModel } from "src/app/core/models/server.model"
 
 export const RANGE_SLIDER_CONFIG = {
     min: 0,
