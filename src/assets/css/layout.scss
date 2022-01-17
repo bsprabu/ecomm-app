@@ -1,6 +1,6 @@
-html, 
+html,
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 0.875rem;
     background-color: $primary-bg-color;
     margin: 0;
@@ -41,9 +41,8 @@ body {
     width: 100%;
 }
 
-
-@media screen and (max-width: 600px){
-    .ecomm-container { 
-        height: fit-content
-    };
+@media screen and (max-width: 600px) {
+    .ecomm-container {
+        height: fit-content;
+    }
 }

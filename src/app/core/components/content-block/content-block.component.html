@@ -3,9 +3,9 @@
     <!-- <a>Sort</a> -->
 </div>
 
+ <!--server details-->
 <div class="container px-0" *ngIf="allServer$ | async as servers; else loading">    
-    <div class="row m-1">
-        <!--content-->
+    <div class="row m-1">       
         <div class="col-md-4 p-1" *ngFor="let server of servers">
             <div class="card ecomm-card">
                 <div class="card-body p-2">
@@ -36,7 +36,7 @@
                             <b>Price:</b> {{server.price.currencySymbol}}.{{server.price.amountCents}}
                         </p>
                     </div>
-                    <div class="card-action d-flex align-item-center">
+                    <div class="ecomm-card-action">
                         <a href="#" class="btn ecomm-btn-primary">Details</a>
                     </div>
                 </div>
@@ -44,9 +44,11 @@
         </div>
     </div>
 </div>
+ <!--server details end -->
 
 <!--Loading Spinner-->
 <ng-template #loading>
     <ngx-spinner type="timer" bdColor ="rgba(0, 0, 0, 0.4)" size="default" [fullScreen]="false">
     </ngx-spinner>
 </ng-template>
+ <!--Spinner end -->

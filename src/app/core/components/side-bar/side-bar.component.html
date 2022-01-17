@@ -47,7 +47,7 @@
         </h6>
         <div class="ecomm-filter-block-content">
             <select class="form-select" aria-label="Hard Disk Type" (change)="onhardDiskSelChange($event)">
-                <option selected value="select">Select</option>
+                <option  value="select">Select</option>
                 <option class="ecomm-select-option" value="{{diskType}}" *ngFor="let diskType of diskTypeDdList">{{diskType}}</option>
             </select>
         </div>
@@ -57,7 +57,7 @@
 <!-- <div class="ecomm-filter-block p-2">
     <section class="col">
         <h6 class="ecomm-filter-block-tiitle">
-            Ram Type
+           Price Slider
             <span class="ecomm-filter-clearall" (click)="onRamFilterReset()" *ngIf="ramFilterDirty">Clear All</span>
         </h6>
         <div class="ecomm-filter-block-content">
