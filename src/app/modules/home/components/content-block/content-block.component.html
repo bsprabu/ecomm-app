@@ -1,50 +1,56 @@
-<h5 class="ecomm-filter-block-header p-2">Server List</h5>
+<h5 class="ecomm-filter-block-header p-2">
+    Server List
+</h5>
 <div class="ecomm-sort-container px-2">
     <!-- <a>Sort</a> -->
 </div>
 
  <!--server details-->
-<div class="container px-0" *ngIf="allServer$ | async as servers; else loading">    
-    <div class="row m-1">       
-        <div class="col-md-4 p-1" *ngFor="let server of servers">
-            <div class="card ecomm-card">
-                <div class="card-body p-2">
-                    <h5 class="card-title">
-                        <a>{{server.model}}</a>
-                    </h5>
-                    <div class="card-text">
-                        <div class="d-flex my-1">
-                            <p class="col my-1">
-                                <b>RAM:</b> {{server.ram.memory}} {{server.ram.unit}}
+<div class="container px-0" *ngIf="allServer$ | async as servers; else loading">
+    <!-- <p class="mx-2">Total Records: {{servers.length}}</p> -->
+        <div class="row m-1" *ngIf="servers.length > 0; else noRecords">
+            <div class="col-md-4 p-1" *ngFor="let server of servers">
+                <div class="card ecomm-card">
+                    <div class="card-body p-2">
+                        <h5 class="card-title">
+                            <a>{{server.model}}</a>
+                        </h5>
+                        <div class="card-text">
+                            <div class="d-flex my-1">
+                                <p class="col my-1">
+                                    <b>RAM:</b> {{server.ram.memory}} {{server.ram.unit}}
+                                </p>
+                                <p class="col my-1">
+                                    <b>Type:</b>
+                                    {{server.ram.type}}
+                                </p>
+                            </div>
+                            <div class="d-flex my-1">
+                                <p class="col my-1">
+                                    <b>HDD:</b> {{server.hdd.memory}} {{server.hdd.unit}}
+                                </p>
+                                <p class="col my-1">
+                                    <b>Type:</b>
+                                    {{server.hdd.type}}
+                                </p>
+                            </div>
+                            <p class="my-1">
+                                <b>Location:</b> {{server.location}}
                             </p>
-                            <p class="col my-1">
-                                <b>Type:</b>
-                                {{server.ram.type}}
+                            <p class="my-1">
+                                <b>Price:</b> {{server.price.currencySymbol}}.{{server.price.amountCents}}
                             </p>
                         </div>
-                        <div class="d-flex my-1">
-                            <p class="col my-1">
-                                <b>HDD:</b> {{server.hdd.memory}} {{server.hdd.unit}}
-                            </p>
-                            <p class="col my-1">
-                                <b>Type:</b>
-                                {{server.hdd.type}}
-                            </p>
+                        <div class="ecomm-card-action">
+                            <a href="#" class="btn ecomm-btn-primary">Details</a>
                         </div>
-                        <p class="my-1">
-                            <b>Location:</b> {{server.location}}
-                        </p>
-                        <p class="my-1">
-                            <b>Price:</b> {{server.price.currencySymbol}}.{{server.price.amountCents}}
-                        </p>
-                    </div>
-                    <div class="ecomm-card-action">
-                        <a href="#" class="btn ecomm-btn-primary">Details</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <ng-template #noRecords>
+        <p class="alert alert-light">No records found...</p>
+    </ng-template>
 </div>
  <!--server details end -->
 

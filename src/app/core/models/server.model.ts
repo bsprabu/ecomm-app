@@ -10,16 +10,16 @@ export interface ServerUIModel {
     price: IPriceUIModel
 }
 
-export interface RamUIModel extends IStorageUIModel {
+export interface RamUIModel extends StorageUIModel {
     checked?: boolean;
 }
 
 
-export interface HddUIModel extends IStorageUIModel {
+export interface HddUIModel extends StorageUIModel {
     count: string;
 }
 
-interface IStorageUIModel {
+export interface StorageUIModel {
     memory: string;
     unit: string;
     type: string;

@@ -1,15 +1,56 @@
+import { LabelType } from "@angular-slider/ngx-slider";
 import { RamUIModel } from "src/app/core/models/server.model"
 
-export const RANGE_SLIDER_CONFIG = {
-    min: 0,
-    max: 7200,
-    options: {
-      floor: 0,
-      ceil: 7200,
-      step: 250,
-      showTicks: true
+export const STORAGE_RANGE_LIST = [
+    {
+        value: 0,
+        unit: 'GB'
+    },
+    {
+        value: 250,
+        unit: 'GB'
+    },
+    {
+        value: 500,
+        unit: 'GB'
+    },
+    {
+        value: 1,
+        unit: 'TB'
+    },
+    {
+        value: 2,
+        unit: 'TB'
+    },
+    {
+        value: 3,
+        unit: 'TB'
+    },
+    {
+        value: 4,
+        unit: 'TB'
+    },
+    {
+        value: 8,
+        unit: 'TB'
+    },
+    {
+        value: 12,
+        unit: 'TB'
+    },
+    {
+        value: 24,
+        unit: 'TB'
+    },
+    {
+        value: 48,
+        unit: 'TB'
+    },
+    {
+        value: 72,
+        unit: 'TB'
     }
-}
+]
 
 export const RAM_LIST: RamUIModel[] = [
     {
@@ -75,3 +116,17 @@ export const RAM_LIST: RamUIModel[] = [
 ]
 
 export const HARD_DISK_TYPES = ['SAS', 'SATA2', 'SSD']
+
+// Range Slider
+export const RANGE_SLIDER_CONFIG = {
+    min: 0,
+    max: 72, // 1Tb = 1000GB
+    options: {
+        showTicks: true,
+        stepsArray: STORAGE_RANGE_LIST,
+        translate: (value: number, label: LabelType): string => {
+            const unit = STORAGE_RANGE_LIST.find(r => r.value === value)?.unit;
+            return `${value} ${unit}`;
+        }
+    }
+}
